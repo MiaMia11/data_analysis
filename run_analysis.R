@@ -47,4 +47,4 @@ mydata2$activity <-factor(mydata2$activity, labels = activity_names)
 #aggregate to get mean of each mean and std for each subject/activity pair and to get the second independent data set
 tidydata <-aggregate(mydata2[,c(3:ncol(mydata2))], by=list(subject=mydata2$subject,activity=mydata2$activity),
                      FUN=mean, na.rm=TRUE)
-write.table(tidydata, file="tidydata.txt")
+write.table(tidydata, file="tidydata.txt")  
